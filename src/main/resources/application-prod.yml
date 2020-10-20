@@ -1,0 +1,15 @@
+spring:
+    main:
+        banner-mode: "off"
+    datasource:
+        url: ${DATABASE_URL:jdbc:sqlserver://localhost:1433;database=SIN;sendStringParametersAsUnicode=false}
+        username: ${DB_USERNAME:SinLogin}
+        password: ${DB_PASSWORD:password}
+        hikari.max-lifetime: ${DB_MAXLIFETIME:800000}
+    jpa:
+      show-sql: false
+      properties.hibernate.format_sql: false
+      properties.hibernate.default_schema: ${JPA_PROPERTIES_HIBERNATE_DEFAULTSCHEMA:GMETOOL}
+      hibernate.naming.physical-strategy: 'org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl'
+      properties.hibernate.dialect: 'org.hibernate.dialect.SQLServer2012Dialect'
+      hibernate.ddl-auto: validate
