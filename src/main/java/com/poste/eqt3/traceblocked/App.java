@@ -37,6 +37,7 @@ public class App
 
   @Override
   public void run (String... args) {
+    logger.info("=========================================");  
     logger.info("Starting EQT3 Trace Blocked Tool version "+this.version);
     logger.debug("listing files in directory '"+lsfFiles.getPath()+"'");
     try {
